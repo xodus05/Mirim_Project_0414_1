@@ -32,7 +32,15 @@ public class MainActivity extends AppCompatActivity {
 //        btnDone.setOnClickListener(btnListener);
 
         checkStart.setOnCheckedChangeListener(checkListener);
+        Button btnFinish = findViewById(R.id.btn_finish);
+        btnFinish.setOnClickListener(btnListener);
     }
+    View.OnClickListener btnListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            finish();
+        }
+    };
     RadioGroup.OnCheckedChangeListener rgListener = new RadioGroup.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup radioGroup, int selectedId) {
